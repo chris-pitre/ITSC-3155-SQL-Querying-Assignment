@@ -12,3 +12,9 @@ i.last_name as advisor_last_name
 FROM student s 
 JOIN instructor i 
 ON s.advisor_id = i.instructor_id;
+
+#Question 4
+SELECT i.instructor_id, i.first_name, i.last_name 
+FROM instructor i 
+LEFT JOIN student s 
+ON instructor_id = advisor_id WHERE s.advisor_id IS NULL;
