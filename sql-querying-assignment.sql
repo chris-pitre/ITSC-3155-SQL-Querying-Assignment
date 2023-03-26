@@ -25,3 +25,9 @@ FROM instructor i JOIN course c ON i.instructor_id = c.instructor_id GROUP BY c.
 
 #Question 6
 SELECT course_code, course_name FROM course WHERE course_code LIKE "%3___";
+
+#Question 7
+SELECT c.course_code, i.first_name, i.last_name, c.num_credits FROM student_schedule ss 
+JOIN course c ON c.course_id = ss.course_id 
+JOIN instructor i ON c.instructor_id = i.instructor_id
+WHERE ss.student_id = 1;
