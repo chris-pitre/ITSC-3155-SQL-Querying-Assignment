@@ -22,3 +22,6 @@ ON instructor_id = advisor_id WHERE s.advisor_id IS NULL;
 #Question 5
 SELECT i.first_name, i.last_name, sum(c.num_credits) as total_credit_hours 
 FROM instructor i JOIN course c ON i.instructor_id = c.instructor_id GROUP BY c.instructor_id;
+
+#Question 6
+SELECT course_code, course_name FROM course WHERE course_code LIKE "%3___";
